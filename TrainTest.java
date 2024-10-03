@@ -11,5 +11,6 @@ public class TrainTest
         train.printManifest();  // Should list Alice in Car 1 and Bob in Car 2
 
         train.getEngine().go();  // Decrease fuel and print fuel level
+        train.printManifest();
     }
 }

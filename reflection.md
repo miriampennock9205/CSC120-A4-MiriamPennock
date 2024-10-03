@@ -1,4 +1,6 @@
 Use this file to record your reflection on this assignment.
 
 - What are your initial impressions of how `Encapsulation` affects your programming?
+I think I understand parts of it better than others for sure. Some of the things I think I just learned naturally as I learned to code, but I think some things will take more time to really get a grasp on, but I feel like that's generally how programming goes for me.
 - What worked, what didn't, what advice would you give someone taking this course in the future?
+I made a little chart-type things to help me keep track of everything, which I found really helpful. I had a lot of errors at first and then discovered it was because I pluralized a variable that was not meant to be/was not initally pluralized. That was my biggest problem on this project, and it took an embarassingly long time to fix/figure out. As for the actual code I feel like it went pretty well, I didn't feel like anything was crazy difficult, it just sometimes took a little time to think through everything. 

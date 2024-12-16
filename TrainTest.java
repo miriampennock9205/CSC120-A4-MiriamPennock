@@ -1,5 +1,6 @@
-public class TrainTest
-{
+
+public class TrainTest {
+
     public static void main(String[] args) {
         Train train = new Train(FuelType.STEAM, 100.0, 3, 5);
         Passenger p1 = new Passenger("Alice");

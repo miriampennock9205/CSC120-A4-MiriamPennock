@@ -1,30 +1,32 @@
+
 import java.util.ArrayList;
+
 /**
- * The Car class represents a train car that can hold a specified number of passengers.
- * It manages adding, removing, and printing passenger information.
+ * The Car class represents a train car that can hold a specified number of
+ * passengers. It manages adding, removing, and printing passenger information.
  */
 public class Car {
+
     private ArrayList<Passenger> passengers;
     private int maxCapacity;
 
     /**
-     * Constructor for the Car class.
-     * Initializes the car with a specified maximum capacity.
+     * Constructor for the Car class. Initializes the car with a specified
+     * maximum capacity.
      *
      * @param maxCapacity The maximum number of passengers the car can hold.
      */
-    public Car(int maxCapacity)
-    {
+    public Car(int maxCapacity) {
         this.passengers = new ArrayList<>();
         this.maxCapacity = maxCapacity;
     }
+
     /**
      * Returns the maximum capacity of the car.
      *
      * @return The maximum number of passengers the car can hold.
      */
-    public int getCapacity()
-    {
+    public int getCapacity() {
         return maxCapacity;
     }
 
@@ -33,8 +35,7 @@ public class Car {
      *
      * @return The number of empty seats available in the car.
      */
-    public int seatsRemaining()
-    {
+    public int seatsRemaining() {
         return maxCapacity - passengers.size();
     }
 
@@ -44,10 +45,8 @@ public class Car {
      * @param p The passenger to be added to the car.
      * @return true if the passenger was successfully added, false otherwise.
      */
-    public boolean addPassenger(Passenger p)
-    {
-        if (seatsRemaining() > 0)
-        {
+    public boolean addPassenger(Passenger p) {
+        if (seatsRemaining() > 0 && !passengers.contains(p)) {
             passengers.add(p);
             return true;
         }
@@ -60,24 +59,25 @@ public class Car {
      * @param p The passenger to be removed from the car.
      * @return true if the passenger was successfully removed, false otherwise.
      */
-    public boolean removePassenger(Passenger p)
-    {
-        return passengers.remove(p);
+    public boolean removePassenger(Passenger p) {
+        if (passengers.contains(p)) {
+            passengers.remove(p);
+            return true;
+        }
+        System.out.println("Passenger not found in this car.");
+        return false;
     }
 
     /**
-     * Prints the list of passengers currently in the car.
-     * If the car is empty, it prints a message indicating that.
+     * Prints the list of passengers currently in the car. If the car is empty,
+     * it prints a message indicating that.
      */
-    public void printManifest()
-    {
-        if (passengers.isEmpty())
-        {
+    public void printManifest() {
+        if (passengers.isEmpty()) {
             System.out.println("This car is EMPTY.");
         } else {
             System.out.println("Passengers:");
-            for (Passenger p : passengers)
-            {
+            for (Passenger p : passengers) {
                 System.out.println(p.getName());
             }
         }
